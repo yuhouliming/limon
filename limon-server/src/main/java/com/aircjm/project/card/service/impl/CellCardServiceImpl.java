@@ -143,7 +143,7 @@ public class CellCardServiceImpl extends ServiceImpl<CellCardMapper, Cell> imple
         QueryWrapper<Cell> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("card_id", request.getCardId());
         Cell one = getOne(queryWrapper);
-        log.info("获取的卡片为：{}", one.getCardTitle());
+        log.info("获取的卡片为：{}", one.getCellTitle());
 
         // 开始生成卡片
         Card card = trello.getCard(request.getCardId());
